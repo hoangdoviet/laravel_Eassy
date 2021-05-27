@@ -15,4 +15,18 @@ return [
     'confirm' => 'Confirm',
     'english' => 'English',
     'vietnamese' => 'VietNamese',
+<<<<<<< HEAD
+=======
+    'success' => 'success !!',
+    'fail' => 'fail !!',
+    'created_by' => 'Created by',
+    'login' => 'Login',
+    'register' => 'Register',
+    'logout' => 'Logout',
+    'forgotpassword' => 'Forgot Password',
+    'confirmpassword' => 'Confirm Password',
+    'password' => 'password',
+    'return' => 'return',
+    'welcome' => 'Welcome, :name',
+>>>>>>> 6d99061 (Authentication and Mail)
 ];

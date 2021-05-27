@@ -5,10 +5,21 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\Auth;
+>>>>>>> 6d99061 (Authentication and Mail)
 use Session;
 
 class ContactController extends Controller
 {
+<<<<<<< HEAD
+=======
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
+>>>>>>> 6d99061 (Authentication and Mail)
     /**
      * Display a listing of the resource.
      *
@@ -30,6 +41,10 @@ class ContactController extends Controller
      */
     public function create()
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6d99061 (Authentication and Mail)
         return view('contact.create');
     }
 
@@ -41,16 +56,28 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
 
+=======
+        $user = Auth::user();
+>>>>>>> 6d99061 (Authentication and Mail)
         $contact = new Contact();
         $contact->name = $request->name;
         $contact->address = $request->address;
         $contact->email = $request->email;
         $contact->content = $request->content;
+<<<<<<< HEAD
         $is_insert = $contact->save();
         // Chuyển hướng về trang danh sách nếu thêm thành công
         if ($is_insert) {
             Session::flash('success', "Thêm mới $contact->name thành công: ! address: $contact->address || Mail: $contact->email || content: $contact->content");
+=======
+        $contact->created_by = $user->email;
+        $is_insert = $contact->save();
+        // Chuyển hướng về trang danh sách nếu thêm thành công
+        if ($is_insert) {
+            Session::flash('success', "$contact->name");
+>>>>>>> 6d99061 (Authentication and Mail)
         } else {
             Session::flash('error', 'Thêm thất bại!');
         }
@@ -92,14 +119,25 @@ class ContactController extends Controller
      */
     public function update(Request $request, $id)
     {
+<<<<<<< HEAD
+=======
+        $user = Auth::user();
+>>>>>>> 6d99061 (Authentication and Mail)
         $contact = Contact::find($id);
         $contact->name = $request->name;
         $contact->address = $request->address;
         $contact->email = $request->email;
         $contact->content = $request->content;
+<<<<<<< HEAD
         $is_update = $contact->save();
         if ($is_update) {
             Session::flash('success', "Cập nhật $contact->name thành công: ! address: $contact->address || Mail: $contact->email || content: $contact->content");
+=======
+        $contact->created_by = $user->email;
+        $is_update = $contact->save();
+        if ($is_update) {
+            Session::flash('success', "$contact->name");
+>>>>>>> 6d99061 (Authentication and Mail)
         } else {
             Session::flash('error', 'Cập nhật thất bại!');
         }

@@ -13,7 +13,11 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
+<<<<<<< HEAD
         // 'App\Models\Model' => 'App\Policies\ModelPolicy',
+=======
+        'App\Models' => 'App\Policies\ModelPolicy',
+>>>>>>> 6d99061 (Authentication and Mail)
     ];
 
     /**
@@ -25,6 +29,22 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
+<<<<<<< HEAD
         //
+=======
+        Gate::define('admin', function ($user) {
+            if ($user->admin == "1") {
+                return true;
+            }
+            return false;
+        });
+
+        Gate::define('guest', function ($user) {
+            if ($user->admin == "1" || $user->admin == "0") {
+                return true;
+            }
+            return false;
+        });
+>>>>>>> 6d99061 (Authentication and Mail)
     }
 }

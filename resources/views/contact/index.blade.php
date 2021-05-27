@@ -4,7 +4,11 @@
 @endcomponent
 @if ( Session::has('success') )
 	<div class="alert alert-success alert-dismissible" role="alert">
+<<<<<<< HEAD
 		<strong>{{ Session::get('success') }}</strong>
+=======
+		<strong>{{ __('language.delete') }} {{ __('language.success') }}</strong>
+>>>>>>> 6d99061 (Authentication and Mail)
 
 	</div>
 @endif
@@ -12,7 +16,11 @@
 <?php //Hiển thị thông báo lỗi?>
 @if ( Session::has('error') )
 	<div class="alert alert-danger alert-dismissible" role="alert">
+<<<<<<< HEAD
 		<strong>{{ Session::get('error') }}</strong>
+=======
+		<strong>{{ __('language.delete') }} {{ __('language.fail') }}</strong>
+>>>>>>> 6d99061 (Authentication and Mail)
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 
@@ -31,6 +39,10 @@
             <th scope="col" class="">{{ __('language.address') }}</th>
             <th scope="col" class="">{{ __('language.email') }}</th>
             <th scope="col" class="">{{ __('language.content') }}</th>
+<<<<<<< HEAD
+=======
+            <th scope="col" class="">{{ __('language.created_by') }}</th>
+>>>>>>> 6d99061 (Authentication and Mail)
           </tr>
         </thead>
         <tbody>
@@ -41,6 +53,11 @@
             <td>{{$contact1->address}}</td>
             <td>{{$contact1->email}}</td>
             <td>{{$contact1->content}}</td>
+<<<<<<< HEAD
+=======
+            <td>{{$contact1->created_by}}</td>
+
+>>>>>>> 6d99061 (Authentication and Mail)
             <td class="d-flex align-items-center justify-content-around">
 
               <form action="{{route('contact.edit',$contact1->id)}}" method="get">
@@ -48,7 +65,11 @@
                 {{ __('language.update') }}
                 </button>
               </form>
+<<<<<<< HEAD
               <form action="{{route('contact.destroy',$contact1->id)}}" method="post">
+=======
+              <form action="{{route('delete',$contact1->id)}}" method="post">
+>>>>>>> 6d99061 (Authentication and Mail)
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
                 <input type="hidden" name="_method" value="delete">
                 <button class="btn btn-sm btn-danger rounded-0">

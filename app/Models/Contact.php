@@ -15,6 +15,10 @@ class Contact extends Model
         'address',
         'email',
         'content',
+<<<<<<< HEAD
+=======
+        'created_by',
+>>>>>>> 6d99061 (Authentication and Mail)
     ];
 
 }

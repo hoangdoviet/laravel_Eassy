@@ -11,7 +11,11 @@ return [
     | reset options for your application. You may change these defaults
     | as required, but they're a perfect start for most applications.
     |
+<<<<<<< HEAD
     */
+=======
+     */
+>>>>>>> 6d99061 (Authentication and Mail)
 
     'defaults' => [
         'guard' => 'web',
@@ -33,7 +37,11 @@ return [
     |
     | Supported: "session", "token"
     |
+<<<<<<< HEAD
     */
+=======
+     */
+>>>>>>> 6d99061 (Authentication and Mail)
 
     'guards' => [
         'web' => [
@@ -44,7 +52,11 @@ return [
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
+<<<<<<< HEAD
             'hash' => false,
+=======
+
+>>>>>>> 6d99061 (Authentication and Mail)
         ],
     ],
 
@@ -63,7 +75,11 @@ return [
     |
     | Supported: "database", "eloquent"
     |
+<<<<<<< HEAD
     */
+=======
+     */
+>>>>>>> 6d99061 (Authentication and Mail)
 
     'providers' => [
         'users' => [
@@ -90,7 +106,11 @@ return [
     | considered valid. This security feature keeps tokens short-lived so
     | they have less time to be guessed. You may change this as needed.
     |
+<<<<<<< HEAD
     */
+=======
+     */
+>>>>>>> 6d99061 (Authentication and Mail)
 
     'passwords' => [
         'users' => [
@@ -110,8 +130,14 @@ return [
     | times out and the user is prompted to re-enter their password via the
     | confirmation screen. By default, the timeout lasts for three hours.
     |
+<<<<<<< HEAD
     */
 
     'password_timeout' => 10800,
+=======
+     */
+
+    // 'password_timeout' => 10800,
+>>>>>>> 6d99061 (Authentication and Mail)
 
 ];
